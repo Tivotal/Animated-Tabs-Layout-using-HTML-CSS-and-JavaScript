@@ -1,0 +1,95 @@
+/* Created by Tivotal */
+
+/* Google Fonts(Poppins) */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f2f2f2;
+}
+
+.wrapper {
+  width: 600px;
+  background: #fff;
+  padding: 30px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+}
+
+.wrapper .tabs {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-bottom: 2px solid rgb(229, 229, 229);
+}
+
+.wrapper .tabs .tab {
+  font-size: 18px;
+  font-weight: 600;
+  color: #919191;
+  background: none;
+  border: none;
+  padding: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.wrapper .tabs .tab.active {
+  color: #4070f4;
+}
+
+.wrapper .tabs .tab:not(.active):hover {
+  color: #717171;
+}
+
+.wrapper .line {
+  position: absolute;
+  width: 90px;
+  height: 3px;
+  background: #4070f4;
+  top: 62px;
+  left: 21px;
+  border-radius: 10px;
+  transition: 0.3s ease-in-out;
+}
+
+.wrapper .tab-content {
+  padding: 20px;
+}
+
+.wrapper .tab-content .content {
+  display: none;
+  animation: anim 0.5s ease;
+}
+
+.wrapper .tab-content .content.active {
+  display: block;
+}
+
+@keyframes anim {
+  from {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+.wrapper .tab-content .content h2 {
+  margin-bottom: 10px;
+}
